@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Basic Fraction Calculator</string>
+
+    <string-array name="operators">
+        <item>+</item>
+        <item>-</item>
+        <item>x</item>
+        <item>/</item>
+    </string-array>
 </resources>
