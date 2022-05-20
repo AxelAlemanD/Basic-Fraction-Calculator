@@ -147,14 +147,6 @@
             android:orientation="horizontal"
             android:padding="20dp">
 
-
-            <!-- Start Blank Space -->
-            <!--            <LinearLayout-->
-            <!--                android:layout_width="match_parent"-->
-            <!--                android:layout_height="match_parent"-->
-            <!--                android:layout_weight="2"-->
-            <!--                android:orientation="vertical" />-->
-
             <!-- RESULT -->
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -205,25 +197,42 @@
 
             </LinearLayout>
 
-            <!-- Start Blank Space -->
-            <!--            <LinearLayout-->
-            <!--                android:layout_width="match_parent"-->
-            <!--                android:layout_height="match_parent"-->
-            <!--                android:layout_weight="2"-->
-            <!--                android:orientation="vertical" />-->
-
-
         </LinearLayout> <!-- END RESULT LAYOUT -->
 
         <!-- START BUTTONS LAYOUT -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginBottom="40dp"
             android:layout_weight="8.5"
             android:gravity="bottom"
             android:orientation="horizontal"
             android:paddingLeft="10dp"
             android:paddingRight="10dp">
+
+            <!-- Button erase -->
+            <Button
+                android:id="@+id/btnClear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_weight="3"
+                android:padding="2dp"
+                android:text="Clear"
+                android:textAllCaps="false" />
+
+            <!-- Button calculate -->
+            <Button
+                android:id="@+id/btnCalculate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_weight="3"
+                android:padding="2dp"
+                android:text="Calculate"
+                android:textAllCaps="false" />
 
         </LinearLayout> <!-- END BUTTONS LAYOUT -->
 
