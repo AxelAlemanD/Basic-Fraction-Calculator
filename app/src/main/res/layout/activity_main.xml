@@ -86,12 +86,12 @@
                     android:id="@+id/operator"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="65dp"
-                    android:layout_marginBottom="65dp"
+                    android:layout_marginTop="100dp"
+                    android:layout_marginBottom="100dp"
                     android:layout_weight="6"
                     android:background="@drawable/border_textedit"
-                    android:minHeight="43dp"
                     android:spinnerMode="dropdown"
+                    android:textAlignment="center"
                     tools:ignore="SpeakableTextPresentCheck" />
 
             </LinearLayout> <!-- END OPERATOR -->
