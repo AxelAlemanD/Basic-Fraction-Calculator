@@ -88,6 +88,54 @@
 
             </LinearLayout> <!-- END OPERATOR -->
 
+
+            <!-- START SECOND FRACTION -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:orientation="vertical"
+                android:padding="20dp"
+                android:textAlignment="center">
+
+                <!-- Label -->
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Second fraction" />
+
+                <!-- Numerator -->
+                <EditText
+                    android:id="@+id/numeratorSecondFraction"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:hint="1"
+                    android:inputType="number"
+                    android:textAlignment="center" />
+
+                <!-- Line
+                Code extracted: https://stackoverflow.com/a/10282253
+                Author: https://stackoverflow.com/users/2502012/stephan -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/black" />
+
+
+                <!-- Denominator -->
+                <EditText
+                    android:id="@+id/denominatorSecondFraction"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:hint="1"
+                    android:inputType="number"
+                    android:textAlignment="center" />
+
+            </LinearLayout> <!-- END SECOND FRACTION -->
+
         </LinearLayout> <!-- END INPUTS LAYOUT -->
 
         <!-- START RESULT LAYOUT -->
