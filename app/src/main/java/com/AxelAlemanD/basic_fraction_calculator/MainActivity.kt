@@ -36,5 +36,17 @@ class MainActivity : AppCompatActivity() {
         adapterOperators.setDropDownViewResource(android.R.layout.simple_spinner_item);
         // Bind adapter with operator spinner
         spOperators.setAdapter(adapterOperators);
+
+
+        // Actions to execute when the Calculate button is pressed
+        btnCalculate.setOnClickListener {
+            var selectedOperator = spOperators.getSelectedItem().toString()
+            when (selectedOperator) {
+                "+" -> Toast.makeText(applicationContext, "Suma", Toast.LENGTH_SHORT).show()
+                "-" -> Toast.makeText(applicationContext, "Resta", Toast.LENGTH_SHORT).show()
+                "x" -> Toast.makeText(applicationContext, "Multiplicación", Toast.LENGTH_SHORT).show()
+                "/" -> Toast.makeText(applicationContext, "División", Toast.LENGTH_SHORT).show()
+            }
+        }
     }
 }
