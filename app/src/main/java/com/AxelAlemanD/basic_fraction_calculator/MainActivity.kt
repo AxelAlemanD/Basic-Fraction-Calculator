@@ -3,6 +3,7 @@ package com.AxelAlemanD.basic_fraction_calculator
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.*
+import com.upv.pm_2022.iti_27849_u1_aleman_delgado_axel_issai.FractionOperations
 
 class MainActivity : AppCompatActivity() {
 
@@ -33,6 +34,8 @@ class MainActivity : AppCompatActivity() {
         btnClear                    = findViewById(R.id.btnClear)
         adapterOperators            = ArrayAdapter.createFromResource(this, R.array.operators, android.R.layout.simple_spinner_item);
 
+        val operations              = FractionOperations(this)
+
         adapterOperators.setDropDownViewResource(android.R.layout.simple_spinner_item);
         // Bind adapter with operator spinner
         spOperators.setAdapter(adapterOperators);
@@ -42,10 +45,10 @@ class MainActivity : AppCompatActivity() {
         btnCalculate.setOnClickListener {
             var selectedOperator = spOperators.getSelectedItem().toString()
             when (selectedOperator) {
-                "+" -> Toast.makeText(applicationContext, "Suma", Toast.LENGTH_SHORT).show()
-                "-" -> Toast.makeText(applicationContext, "Resta", Toast.LENGTH_SHORT).show()
-                "x" -> Toast.makeText(applicationContext, "Multiplicación", Toast.LENGTH_SHORT).show()
-                "/" -> Toast.makeText(applicationContext, "División", Toast.LENGTH_SHORT).show()
+                "+" -> operations.sum()
+                "-" -> operations.sub()
+                "x" -> operations.mult()
+                "/" -> operations.div()
             }
         }
     }
