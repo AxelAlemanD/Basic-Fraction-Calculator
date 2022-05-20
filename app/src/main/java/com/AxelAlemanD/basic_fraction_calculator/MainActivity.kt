@@ -16,6 +16,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var resultDenominator           :  TextView
     lateinit var btnCalculate                :  Button
     lateinit var btnClear                    :  Button
+    lateinit var adapterOperators            :   ArrayAdapter<CharSequence>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,5 +31,10 @@ class MainActivity : AppCompatActivity() {
         resultDenominator           = findViewById(R.id.resultDenominator)
         btnCalculate                = findViewById(R.id.btnCalculate)
         btnClear                    = findViewById(R.id.btnClear)
+        adapterOperators            = ArrayAdapter.createFromResource(this, R.array.operators, android.R.layout.simple_spinner_item);
+
+        adapterOperators.setDropDownViewResource(android.R.layout.simple_spinner_item);
+        // Bind adapter with operator spinner
+        spOperators.setAdapter(adapterOperators);
     }
 }
