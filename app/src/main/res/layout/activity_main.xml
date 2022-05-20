@@ -55,7 +55,7 @@
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:background="@color/black" />
+                    android:background="#CAC4D0" />
 
                 <!-- Denominator -->
                 <EditText
@@ -132,7 +132,8 @@
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:background="@color/black" />
+                    android:background="#CAC4D0"
+                    android:backgroundTint="#CAC4D0"/>
 
 
                 <!-- Denominator -->
@@ -197,7 +198,7 @@
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:background="@color/black" />
+                    android:background="#CAC4D0" />
 
                 <!-- Denominator result -->
                 <TextView
