@@ -53,6 +53,17 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
+
+        // Clear all input fields and result
+        btnClear.setOnClickListener {
+            Toast.makeText(applicationContext, "Done!", Toast.LENGTH_SHORT).show()
+            numeratorFirstFraction.setText("")
+            denominatorFirstFraction.setText("")
+            numeratorSecondFraction.setText("")
+            denominatorSecondFraction.setText("")
+            resultNumerator.setText("0")
+            resultDenominator.setText("0")
+        }
     }
 
     /***
