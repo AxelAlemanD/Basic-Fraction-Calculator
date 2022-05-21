@@ -43,13 +43,31 @@ class MainActivity : AppCompatActivity() {
 
         // Actions to execute when the Calculate button is pressed
         btnCalculate.setOnClickListener {
-            var selectedOperator = spOperators.getSelectedItem().toString()
-            when (selectedOperator) {
-                "+" -> operations.sum()
-                "-" -> operations.sub()
-                "x" -> operations.mult()
-                "/" -> operations.div()
+            if(validateFields()){
+                var selectedOperator = spOperators.getSelectedItem().toString()
+                when (selectedOperator) {
+                    "+" -> operations.sum()
+                    "-" -> operations.sub()
+                    "x" -> operations.mult()
+                    "/" -> operations.div()
+                }
             }
         }
+    }
+
+    /***
+     * Validate that the fields contain a value, otherwise it shows a warning
+     */
+    private fun validateFields(): Boolean{
+        var isValid = true
+        val fields : List<EditText> = listOf(numeratorFirstFraction, denominatorFirstFraction, numeratorSecondFraction, denominatorSecondFraction)
+        fields.forEach{ field ->
+            if(field.text.toString().isEmpty()) {
+                field.setError("Please, enter a value")
+                field.requestFocus();
+                isValid = false
+            }
+        }
+        return isValid
     }
 }

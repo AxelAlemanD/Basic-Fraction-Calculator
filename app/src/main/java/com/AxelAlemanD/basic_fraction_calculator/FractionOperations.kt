@@ -127,11 +127,6 @@ class FractionOperations(mainActivity: MainActivity) {
      * @return Int
      */
     private fun getNumericValue(EditText: EditText): Int{
-        try{
-            return EditText.text.toString().toInt()
-        } catch(e: NumberFormatException){
-            EditText.setError("Please, enter a value")
-        }
-        return 0
+        return EditText.text.toString().toInt()
     }
 }
