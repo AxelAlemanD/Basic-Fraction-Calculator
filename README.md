@@ -1,4 +1,15 @@
-# Basic Fraction Calculator
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/99099658/169712184-f4c82af9-83ea-4adc-b9fd-16d0cfffca13.svg" width="12%">
+  <h1>Basic Fraction Calculator</h1>
+  
+  <br>  
+  
+  ![Android](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)
+  ![Kotlin](https://img.shields.io/badge/Kotlin-0095D5?&style=for-the-badge&logo=kotlin&logoColor=white)
+  ![AndroidStudio](https://img.shields.io/badge/Android_Studio-3DDC84?style=for-the-badge&logo=android-studio&logoColor=white)
+</div>
+
+<br>
 
 Mobile calculator that allows you to perform basic operations (addition, subtraction, multiplication and division) using two fractions
 
