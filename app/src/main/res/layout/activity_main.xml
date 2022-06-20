@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#24272e"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
@@ -17,7 +18,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="8"
+            android:layout_weight="10"
             android:orientation="horizontal"
             android:padding="20dp">
 
@@ -34,7 +35,9 @@
                     android:id="@+id/textView3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="First fraction" />
+                    android:text="First fraction"
+                    android:textColor="#fff"
+                    android:textColorHint="#fff" />
 
                 <!-- Numerator -->
                 <EditText
@@ -44,11 +47,14 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp"
                     android:layout_weight="2"
-                    android:background="@drawable/border_textedit"
+                    android:backgroundTint="#31343b"
+                    android:digits="1234567890"
                     android:hint="1"
                     android:inputType="phone"
-                    android:digits="1234567890"
-                    android:textAlignment="center" />
+                    android:textAlignment="center"
+                    android:textColor="#fff"
+                    android:textColorHint="#68FFFFFF"
+                    android:textSize="20sp" />
 
                 <!-- Line
                 Code extracted: https://stackoverflow.com/a/10282253
@@ -66,11 +72,14 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp"
                     android:layout_weight="2"
-                    android:background="@drawable/border_textedit"
+                    android:backgroundTint="#31343b"
+                    android:digits="1234567890"
                     android:hint="1"
                     android:inputType="phone"
-                    android:digits="1234567890"
-                    android:textAlignment="center" />
+                    android:textAlignment="center"
+                    android:textColor="#FFF"
+                    android:textColorHint="#68FFFFFF"
+                    android:textSize="20sp" />
 
             </LinearLayout> <!-- END FIRST FRACTION -->
 
@@ -80,7 +89,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="4"
                 android:orientation="vertical"
-                android:padding="20dp"
+                android:padding="5dp"
                 android:visibility="visible">
 
                 <!-- OPERATORS -->
@@ -88,10 +97,10 @@
                     android:id="@+id/operator"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="100dp"
-                    android:layout_marginBottom="100dp"
+                    android:layout_marginTop="70dp"
+                    android:layout_marginBottom="70dp"
                     android:layout_weight="6"
-                    android:background="@drawable/border_textedit"
+                    android:dropDownWidth="match_parent"
                     android:spinnerMode="dropdown"
                     android:textAlignment="center"
                     tools:ignore="SpeakableTextPresentCheck" />
@@ -113,7 +122,8 @@
                     android:id="@+id/textView4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Second fraction" />
+                    android:text="Second fraction"
+                    android:textColor="#FFF" />
 
                 <!-- Numerator -->
                 <EditText
@@ -123,11 +133,15 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp"
                     android:layout_weight="2"
-                    android:background="@drawable/border_textedit"
+                    android:backgroundTint="#31343b"
+                    android:digits="1234567890"
                     android:hint="1"
                     android:inputType="phone"
-                    android:digits="1234567890"
-                    android:textAlignment="center" />
+                    android:minHeight="48dp"
+                    android:textAlignment="center"
+                    android:textColor="#fff"
+                    android:textColorHint="#68FFFFFF"
+                    android:textSize="20sp" />
 
                 <!-- Line
                 Code extracted: https://stackoverflow.com/a/10282253
@@ -136,7 +150,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:background="#CAC4D0"
-                    android:backgroundTint="#CAC4D0"/>
+                    android:backgroundTint="#CAC4D0" />
 
 
                 <!-- Denominator -->
@@ -147,11 +161,14 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp"
                     android:layout_weight="2"
-                    android:background="@drawable/border_textedit"
+                    android:backgroundTint="#31343b"
+                    android:digits="1234567890"
                     android:hint="1"
                     android:inputType="phone"
-                    android:digits="1234567890"
-                    android:textAlignment="center" />
+                    android:textAlignment="center"
+                    android:textColor="#fff"
+                    android:textColorHint="#68FFFFFF"
+                    android:textSize="20sp" />
 
             </LinearLayout> <!-- END SECOND FRACTION -->
 
@@ -161,60 +178,553 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="60dp"
-            android:layout_weight="8"
-            android:orientation="horizontal"
-            android:padding="20dp">
+            android:layout_weight="6"
+            android:orientation="vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
 
-            <!-- RESULT -->
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="125dp"
-                android:layout_marginRight="125dp"
-                android:layout_weight="2"
-                android:orientation="vertical">
+            <!-- Label -->
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="Solution"
+                android:textColor="#FFF"
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
-                <!-- Label -->
-                <TextView
-                    android:id="@+id/textView2"
+            <!-- Start First Step -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/firstStepCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:visibility="invisible"
+                app:cardBackgroundColor="#00FFFFFF"
+                app:cardCornerRadius="8dp">
+
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="25dp"
-                    android:text="Result"
-                    android:textAlignment="center"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
 
-                <!-- Numerator result -->
-                <TextView
-                    android:id="@+id/resultNumerator"
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:background="#31343b"
+                        android:backgroundTint="#31343b"
+                        android:fadingEdge="vertical"
+                        android:orientation="horizontal">
+
+                        <!-- Label -->
+                        <TextView
+                            android:id="@+id/instructionsStep1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="-5dp"
+                            android:layout_weight="1"
+                            android:padding="5dp"
+                            android:text="Step 1: We get the least common multiple"
+                            android:textColor="#FFF"
+                            android:textSize="16sp" />
+
+                        <!-- Button expand -->
+                        <Button
+                            android:id="@+id/btnExpandStep1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="-5dp"
+                            android:layout_marginBottom="-5dp"
+                            android:layout_weight="1"
+                            android:backgroundTint="#ff6add"
+                            android:shadowColor="#00FFFFFF"
+                            android:text="+"
+                            android:textAllCaps="false"
+                            android:textColor="#FFF"
+                            android:textSize="12dp"
+                            tools:ignore="TouchTargetSizeCheck" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/expandableLayoutStep1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="230dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:padding="15dp"
+                            android:text="="
+                            android:textAlignment="center"
+                            android:textColor="#FFF" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:orientation="vertical">
+
+
+                            <!-- Numerator result -->
+                            <TextView
+                                android:id="@+id/resultNumeratorStep1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="1"
+                                android:textAlignment="center"
+                                android:textColor="#FFF"
+                                android:textSize="18sp" />
+
+                            <!-- Line
+                    Code extracted: https://stackoverflow.com/a/10282253
+                    Author: https://stackoverflow.com/users/2502012/stephan -->
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="#CAC4D0" />
+
+                            <!-- Denominator result -->
+                            <TextView
+                                android:id="@+id/resultDenominatorStep1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="1"
+                                android:textAlignment="center"
+                                android:textColor="#FFF"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/operatorStep1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:padding="15dp"
+                            android:text="="
+                            android:textAlignment="center"
+                            android:textColor="#FFF"
+                            android:visibility="invisible" />
+
+                        <LinearLayout
+                            android:id="@+id/secondFractionStep1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:orientation="vertical"
+                            android:visibility="invisible">
+
+
+                            <!-- Numerator result -->
+                            <TextView
+                                android:id="@+id/numeratorSecondFractionStep1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="1"
+                                android:textAlignment="center"
+                                android:textColor="#FFF"
+                                android:textSize="18sp" />
+
+                            <!-- Line
+                    Code extracted: https://stackoverflow.com/a/10282253
+                    Author: https://stackoverflow.com/users/2502012/stephan -->
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="#CAC4D0" />
+
+                            <!-- Denominator result -->
+                            <TextView
+                                android:id="@+id/denominatorSecondFractionStep1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="1"
+                                android:textAlignment="center"
+                                android:textColor="#FFF"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView><!-- End First Step -->
+
+            <!-- Second Step -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/secondStepCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:visibility="invisible"
+                app:cardBackgroundColor="#00FFFFFF"
+                app:cardCornerRadius="8dp">
+
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp"
-                    android:text="1"
-                    android:textAlignment="center"
-                    android:textSize="28sp" />
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
 
-                <!-- Line
-                Code extracted: https://stackoverflow.com/a/10282253
-                Author: https://stackoverflow.com/users/2502012/stephan -->
-                <View
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:background="#31343b"
+                        android:backgroundTint="#31343b"
+                        android:fadingEdge="vertical"
+                        android:orientation="horizontal">
+
+                        <!-- Label -->
+                        <TextView
+                            android:id="@+id/instructionsStep2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:padding="5dp"
+                            android:text="Step 2: Rewrite the fractions based on the lowest common denominator"
+                            android:textColor="#FFF"
+                            android:textSize="16sp" />
+
+                        <!-- Button expand -->
+                        <Button
+                            android:id="@+id/btnExpandStep2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="-5dp"
+                            android:layout_marginBottom="-5dp"
+                            android:layout_weight="1"
+                            android:backgroundTint="#ff6add"
+                            android:shadowColor="#00FFFFFF"
+                            android:text="+"
+                            android:textAllCaps="false"
+                            android:textColor="#FFF"
+                            android:textSize="12dp"
+                            tools:ignore="TouchTargetSizeCheck" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/expandableLayoutStep2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="230dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:padding="15dp"
+                            android:text="="
+                            android:textAlignment="center"
+                            android:textColor="#FFF" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:orientation="vertical">
+
+
+                            <!-- Numerator result -->
+                            <TextView
+                                android:id="@+id/resultNumeratorStep2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="1"
+                                android:textAlignment="center"
+                                android:textColor="#FFF"
+                                android:textSize="18sp" />
+
+                            <!-- Line
+                    Code extracted: https://stackoverflow.com/a/10282253
+                    Author: https://stackoverflow.com/users/2502012/stephan -->
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="#CAC4D0" />
+
+                            <!-- Denominator result -->
+                            <TextView
+                                android:id="@+id/resultDenominatorStep2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="1"
+                                android:textAlignment="center"
+                                android:textColor="#FFF"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/operatorStep2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:padding="15dp"
+                            android:text="="
+                            android:textAlignment="center"
+                            android:textColor="#FFF"
+                            android:visibility="invisible" />
+
+                        <LinearLayout
+                            android:id="@+id/secondFractionStep2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:orientation="vertical"
+                            android:visibility="invisible">
+
+
+                            <!-- Numerator result -->
+                            <TextView
+                                android:id="@+id/numeratorSecondFractionStep2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="1"
+                                android:textAlignment="center"
+                                android:textColor="#FFF"
+                                android:textSize="18sp" />
+
+                            <!-- Line
+                    Code extracted: https://stackoverflow.com/a/10282253
+                    Author: https://stackoverflow.com/users/2502012/stephan -->
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="#CAC4D0" />
+
+                            <!-- Denominator result -->
+                            <TextView
+                                android:id="@+id/denominatorSecondFractionStep2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="1"
+                                android:textAlignment="center"
+                                android:textColor="#FFF"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView><!-- End Second Step -->
+
+            <!-- Third Step -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/thirdStepCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:visibility="invisible"
+                app:cardBackgroundColor="#00FFFFFF"
+                app:cardCornerRadius="8dp">
+
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="#CAC4D0" />
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
 
-                <!-- Denominator result -->
-                <TextView
-                    android:id="@+id/resultDenominator"
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:background="#31343b"
+                        android:backgroundTint="#31343b"
+                        android:fadingEdge="vertical"
+                        android:orientation="horizontal">
+
+                        <!-- Label -->
+                        <TextView
+                            android:id="@+id/instructionsStep3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:padding="5dp"
+                            android:text="Step 3: Apply the properties of fractions"
+                            android:textColor="#FFF"
+                            android:textSize="16sp" />
+
+                        <!-- Button expand -->
+                        <Button
+                            android:id="@+id/btnExpandStep3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="-5dp"
+                            android:layout_marginBottom="-5dp"
+                            android:layout_weight="1"
+                            android:backgroundTint="#ff6add"
+                            android:shadowColor="#00FFFFFF"
+                            android:text="+"
+                            android:textAllCaps="false"
+                            android:textColor="#FFF"
+                            android:textSize="12dp"
+                            tools:ignore="TouchTargetSizeCheck" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/expandableLayoutStep3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="300dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:padding="15dp"
+                            android:text="="
+                            android:textAlignment="center"
+                            android:textColor="#FFF" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:orientation="vertical">
+
+
+                            <!-- Numerator result -->
+                            <TextView
+                                android:id="@+id/resultNumeratorStep3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="1"
+                                android:textAlignment="center"
+                                android:textColor="#FFF"
+                                android:textSize="18sp" />
+
+                            <!-- Line
+                    Code extracted: https://stackoverflow.com/a/10282253
+                    Author: https://stackoverflow.com/users/2502012/stephan -->
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="#CAC4D0" />
+
+                            <!-- Denominator result -->
+                            <TextView
+                                android:id="@+id/resultDenominatorStep3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="1"
+                                android:textAlignment="center"
+                                android:textColor="#FFF"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView><!-- End Third Step -->
+
+            <!-- Four Step -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/fourStepCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:visibility="invisible"
+                app:cardBackgroundColor="#00FFFFFF"
+                app:cardCornerRadius="8dp">
+
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:text="1"
-                    android:textAlignment="center"
-                    android:textSize="28sp" />
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
 
-            </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:background="#31343b"
+                        android:backgroundTint="#31343b"
+                        android:fadingEdge="vertical"
+                        android:orientation="horizontal">
+
+                        <!-- Label -->
+                        <TextView
+                            android:id="@+id/instructionsStep4"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:padding="5dp"
+                            android:text="Step 4: Apply the properties of fractions"
+                            android:textColor="#FFF"
+                            android:textSize="16sp" />
+
+                        <!-- Button expand -->
+                        <Button
+                            android:id="@+id/btnExpandStep4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="-5dp"
+                            android:layout_marginBottom="-5dp"
+                            android:layout_weight="1"
+                            android:backgroundTint="#ff6add"
+                            android:shadowColor="#00FFFFFF"
+                            android:text="+"
+                            android:textAllCaps="false"
+                            android:textColor="#FFF"
+                            android:textSize="12dp"
+                            tools:ignore="TouchTargetSizeCheck" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/expandableLayoutStep4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="300dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:padding="15dp"
+                            android:text="="
+                            android:textAlignment="center"
+                            android:textColor="#FFF" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:orientation="vertical">
+
+
+                            <!-- Numerator result -->
+                            <TextView
+                                android:id="@+id/resultNumeratorStep4"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="1"
+                                android:textAlignment="center"
+                                android:textColor="#FFF"
+                                android:textSize="18sp" />
+
+                            <!-- Line
+                    Code extracted: https://stackoverflow.com/a/10282253
+                    Author: https://stackoverflow.com/users/2502012/stephan -->
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="#CAC4D0" />
+
+                            <!-- Denominator result -->
+                            <TextView
+                                android:id="@+id/resultDenominatorStep4"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="1"
+                                android:textAlignment="center"
+                                android:textColor="#FFF"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView><!-- End Four Step -->
 
         </LinearLayout> <!-- END RESULT LAYOUT -->
 
@@ -223,7 +733,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginBottom="40dp"
-            android:layout_weight="8.5"
+            android:layout_weight="12"
             android:gravity="bottom"
             android:orientation="horizontal"
             android:paddingLeft="10dp"
@@ -237,7 +747,7 @@
                 android:layout_marginLeft="40dp"
                 android:layout_marginRight="40dp"
                 android:layout_weight="3"
-                android:backgroundTint="#00FFFFFF"
+                android:backgroundTint="#24272e"
                 android:padding="2dp"
                 android:text="Clear"
                 android:textAllCaps="false"

@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://user-images.githubusercontent.com/99099658/169712184-f4c82af9-83ea-4adc-b9fd-16d0cfffca13.svg" width="12%">
+  <img src="https://user-images.githubusercontent.com/99099658/174658350-9caf2caf-26a6-4b7d-9d00-09054ced3bb8.png" width="12%">
   <h1>Basic Fraction Calculator</h1>
   
   <br>  
@@ -14,10 +14,10 @@
 Mobile calculator that allows you to perform basic operations (addition, subtraction, multiplication and division) using two fractions
 
 ## Visuals
-|   |   |   |
-|---|---|---|
-| <img src="https://user-images.githubusercontent.com/99099658/169627940-ff423fac-91a8-4618-b550-6b59691dbdae.jpg" width="100%"> | <img src="https://user-images.githubusercontent.com/99099658/169628122-0139c493-4280-4490-892c-c5eb3eea75d1.jpg" width="100%"> | <img src="https://user-images.githubusercontent.com/99099658/169628078-76933a2a-12f0-4e42-a0da-9833fb8ff5db.jpg" width="100%"> |
-| <p align="center">Open application </p> | <p align="center">Validating fields </p> | <p align="center">Showing results </p> |
+|   |   |   |   |
+|---|---|---|---|
+| <img src="https://user-images.githubusercontent.com/99099658/174658651-8d7d3773-29ee-4d34-96a1-91a42680c9e1.jpg" width="100%"> | <img src="https://user-images.githubusercontent.com/99099658/174658748-4d561fdc-dcb1-4aaf-a4d9-38c6ad5109f6.jpg" width="100%"> | <img src="https://user-images.githubusercontent.com/99099658/174658822-5d95b12c-9a4f-4a1a-ad96-c5fa9680656f.jpg" width="100%"> | <img src="https://user-images.githubusercontent.com/99099658/174658875-ddf49ec6-b422-41c6-991e-fc248233a954.jpg" width="100%"> |
+| <p align="center">Open application </p> | <p align="center">Validating fields </p> | <p align="center">Solved operation </p> | <p align="center">Cleaning results </p> |
 
 
 ---
